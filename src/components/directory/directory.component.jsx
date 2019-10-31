@@ -12,33 +12,33 @@
           title: 'vaz',
           imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
           id: 1,
-          linkUrl: 'shop/hats'
+          linkUrl: 'room/vaz'
         },
         {
           title: 'mazda',
           imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
           id: 2,
-          linkUrl: 'shop/jackets'
+          linkUrl: 'room/mazda'
         },
         {
           title: 'lexus',
           imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
           id: 3,
-          linkUrl: 'shop/sneakers'
+          linkUrl: 'room/lexus'
         },
         {
-          title: 'womens',
+          title: 'bmw',
           imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
           size: 'large',
           id: 4,
-          linkUrl: 'shop/womens'
+          linkUrl: 'room/bmw'
         },
         {
-          title: 'mens',
+          title: 'lexus',
           imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
           size: 'large',
           id: 5,
-          linkUrl: 'shop/mens'
+          linkUrl: 'room/lexus'
         }
       ]
     }
@@ -48,8 +48,11 @@
     return (
       <div className='directory-menu'>
         {
-          this.state.sections.map(({title, imageUrl, id})=>(
-            <MenuItem key={id} title={title} imageUrl={imageUrl}  />
+          this.state.sections.map(({id, ...otherSectionProps})=>(
+            <MenuItem 
+            key={id} 
+              {...otherSectionProps}
+            />
           ))
         }
       </div>
