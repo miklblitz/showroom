@@ -1,7 +1,7 @@
  import React from 'react';
  import './directory.style.scss';
 
- const Directory = (props) =>(
+ const Directory = () =>(
   
  )
 
